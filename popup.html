@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <!-- CSS only -->
+  <script src="https://kit.fontawesome.com/4a0faa16a8.js" crossorigin="anonymous"></script>
+  <title>MEDIA-CON</title>
+</head>
+<body>
+
+  <h4>MEDIA-CON</h4>
+
+  <div id="tab_info_proto" class="tab_info" hidden>
+    <a class="tab_icon" href="https://www.youtube.com/"><img src="img/youtube_social_icon_red.png" alt=""></a>
+    <span class="tab_no" hidden>0</span>
+    <a class="tab_title" href="#">tsunenori - Floral Clock</a>
+    <div class="tab_controller">
+      <button class="play"><i class="fas fa-play"></i></button>
+      <button class="pause" hidden><i class="fas fa-pause"></i></button>
+      <button class="next"><i class="fas fa-step-forward"></i></button>
+      <button class="mute"><i class="fas fa-volume-mute"></i></button>
+    </div>
+  </div>
+
+
+  <div id="tab_list"></div>
+
+  <div hidden>
+  <button id="bss">|></button>
+  <button id="bnext">-></button>
+  <button id="bmute">-/-</button>
+</div>
+
+<br>
+<br>
+<br>
+  <!-- 発言フォーム -->
+  <form id="frm-post">
+    <input type="text" id="msg">
+    <button>command</button>
+  </form>
+
+  <!-- 発言ログ -->
+  <ul id="msglist">
+  </ul>
+
+  <script src="socket.io/socket.io.js"></script>
+  <script src="popup.js"></script>
+
+
+  <div id="feedbackchan">
+    <input type="text" id="textchan" width=200>
+    <button id="subchan">send feedback</button><span id="thanchan"></button>
+    <script src="feedbackchan.js"></script>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SocketIOチャット</title>
+</head>
+<body>
+
+<h1>SocketIOチャット</h1>
+
+<!-- 発言フォーム -->
+<form id="frm-post">
+  <input type="text" id="msg">
+  <button>送信</button>
+</form>
+
+<!-- 発言ログ -->
+<ul id="msglist">
+</ul>
+<iframe src="http://localhost:4000"></iframe>
+
+<script src="socket.io/socket.io.js"></script>
+<script src="background.js"></script>
+
+</body>
+</html>

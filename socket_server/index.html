@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- CSS only -->
+  <script src="https://kit.fontawesome.com/4a0faa16a8.js" crossorigin="anonymous"></script>
+  <title>MEDIA-CON</title>
+</head>
+
+<body>
+  <div data-role="p-top">
+    <h4>MEDIA-CON</h4>
+
+    <div id="tab_info_proto" class="tab_info " hidden data-role="content">
+      <br />
+      <br />
+      <a class="tab_icon" href="https://www.youtube.com/"><img src="img/youtube_social_icon_red.png" alt="" hidden></a>
+      <span class="tab_no" hidden>0</span>
+      <a class="tab_title" href="#" target="_blank">tsunenori - Floral Clock</a>
+      <div class="tab_controller">
+        <button class="ui-btn play"><i class="fas fa-play"></i></button>
+        <button class="ui-btn pause"><i class="fas fa-pause" hidden></i></button>
+        <button class="ui-btn next"><i class="fas fa-step-forward"></i></button>
+        <button class="ui-btn mute"><i class="fas fa-volume-mute"></i></button>
+      </div>
+    </div>
+
+    <div id="tab_list"></div>
+
+    <div hidden>
+      <button id="bss">|></button>
+      <button id="bnext">-></button>
+      <button id="bmute">-/-</button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <!-- 発言フォーム -->
+    <form id="frm-post">
+      <input type="text" id="msg">
+      <button>command</button>
+    </form>
+
+    <!-- 発言ログ -->
+    <ul id="msglist">
+    </ul>
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="commander.js"></script>
+
+
+    <div id="feedbackchan">
+      <input type="text" id="textchan" width=200>
+      <button id="subchan">send feedback</button><span id="thanchan"></button>
+        <script src="feedbackchan.js"></script>
+    </div>
+  </div>
+</body>
+
+</html>
